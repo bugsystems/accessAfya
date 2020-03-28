@@ -1,13 +1,44 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Custom style begins here */
+
+/* Progress bar */
+.efficiency-bar {
+  background-color: rgb(153, 68, 233);
+}
+.wrapper {
+  margin: 30px;
+  background-color: '#F8F9FA';
+}
+.btn:active {
+  border-color: rgb(153, 68, 233);
+}
+.notification-bar {
+  background-color: white;
+  align-content: center;
+  padding: 10px;
+}
+.sidebar-menu {
+  border-right: 1;
+  border-right-color: whitesmoke;
+}
+.profile {
+  background-image: url('./images/user.jpg');
+}
+.img-user {
+  width: 50px;
+  height: 50px;
+  float: right;
 }
