@@ -42,3 +42,10 @@ code {
   height: 50px;
   float: right;
 }
+.chart {
+  margin: 5px;
+}
+.chart-value {
+  color: blueviolet;
+  font-size: 24px;
+}

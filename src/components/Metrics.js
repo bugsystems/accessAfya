@@ -227,11 +227,25 @@ class Metrics extends Component {
                         {/* Row 3 for charts */}
                         <div className='row'>
                           <div className=' col-md-12 mt-3'>
-                            <div className='card col-md-4'>
-                              <Chart />
-                            </div>
-                            <div className='card col-md-4'>
-                              <Chart />
+                            <div className='row'>
+                              <div className='card col-md-4 chart'>
+                                <h6>Foot Fall</h6>
+                                <p className='chart-value'>13k Patients </p>
+                                <Chart />
+                              </div>
+                              <div className='card col-md-4 chart'>
+                                <h6>Patient Satisfaction</h6>
+                                <p className='chart-value'>7.8 NPS </p>
+                                <Chart />
+                              </div>
+
+                              <div className='card col-md-4 chart'>
+                                <h6>Revenue</h6>
+                                <p className='chart-value'>4.2M Kshs</p>
+                                <div style={{ float: 'right' }}>
+                                  <Chart />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
