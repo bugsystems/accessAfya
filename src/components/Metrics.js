@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import user from '../images/user.jpg';
+import Chart from './charts/Chart';
 
 import { Container, Row } from 'react-bootstrap-grid-component';
 
@@ -225,21 +226,12 @@ class Metrics extends Component {
                         </div>
                         {/* Row 3 for charts */}
                         <div className='row'>
-                          <div className='card col-md-12 mt-3'>
-                            <div className='card-body'>
-                              <p className='text-muted'>Chart & Graphs</p>
-                              <div className='row'>
-                                <div className='col-lg-3 col-sm-6'>
-                                  <div className='card'>
-                                    <div className='card-heading'>
-                                      <div>Revenue from Amazon</div>
-                                    </div>
-                                    <div className='card-value'>
-                                      <span>$50k</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                          <div className=' col-md-12 mt-3'>
+                            <div className='card col-md-4'>
+                              <Chart />
+                            </div>
+                            <div className='card col-md-4'>
+                              <Chart />
                             </div>
                           </div>
                         </div>
