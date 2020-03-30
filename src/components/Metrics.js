@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import user from '../images/user.jpg';
 import Chart from './charts/Chart';
+import Revenue from './charts/Revenue';
 
 import { Container, Row } from 'react-bootstrap-grid-component';
 
@@ -16,7 +17,14 @@ class Metrics extends Component {
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-2 mt-1 sidebar-menu'>
-            <p>Side Menu</p>
+            <div className='row'>
+              <div className='offset-4 sidebar-items'>
+                <div className='mt-2'>Home</div>
+                <div>Comments</div>
+                <div>Analytics</div>
+                <div>Settings</div>
+              </div>
+            </div>
           </div>
           <div className='col-md-10'>
             <div className='row  notification-bar'>
@@ -52,13 +60,17 @@ class Metrics extends Component {
                   <Container>
                     <h2>Analytics</h2>
                     <Row>
-                      <div className='col-md-3'>
+                      <div className='col-md-4'>
                         <div className='row'>
-                          <div className='card col-md-11 mt-3'>
+                          <div
+                            className='card col-md-11 mt-3 visited'
+                            style={{ textAlign: 'justify', height: 'auto' }}
+                          >
                             <div className='card-body'>
                               <p className='text-muted'>VISITS</p>
                               <button
-                                className='btn mt-1'
+                                id='visit'
+                                className='btn mt-1 active'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
@@ -70,7 +82,8 @@ class Metrics extends Component {
                                 >
                                   7
                                 </span>
-                                Kiambu
+                                Kiambu{' '}
+                                <span className='glyphicon glyphicon-options-vertical'></span>
                               </button>
                               <button
                                 className='btn mt-1'
@@ -117,6 +130,7 @@ class Metrics extends Component {
                                 </span>
                                 Baba Dogo
                               </button>
+                              <br />
                               <button
                                 className='btn mt-1'
                                 style={{
@@ -132,6 +146,7 @@ class Metrics extends Component {
                                 </span>
                                 Kosovo
                               </button>
+                              <br />
                               <button
                                 className='btn mt-1'
                                 style={{
@@ -151,7 +166,7 @@ class Metrics extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className='col-md-9'>
+                      <div className='col-md-8'>
                         <div className='row'>
                           <div className='card col-md-12 mt-3'>
                             <div className='card-body'>
@@ -225,25 +240,25 @@ class Metrics extends Component {
                           </div>
                         </div>
                         {/* Row 3 for charts */}
-                        <div className='row'>
+                        <div className='row chart-items'>
                           <div className=' col-md-12 mt-3'>
                             <div className='row'>
-                              <div className='card col-md-4 chart'>
+                              <div className='card col-md-4 mt-2'>
                                 <h6>Foot Fall</h6>
                                 <p className='chart-value'>13k Patients </p>
                                 <Chart />
                               </div>
-                              <div className='card col-md-4 chart'>
+                              <div className='card col-md-4 mt-2'>
                                 <h6>Patient Satisfaction</h6>
                                 <p className='chart-value'>7.8 NPS </p>
                                 <Chart />
                               </div>
 
-                              <div className='card col-md-4 chart'>
+                              <div className='card col-md-4 mt-2'>
                                 <h6>Revenue</h6>
                                 <p className='chart-value'>4.2M Kshs</p>
                                 <div style={{ float: 'right' }}>
-                                  <Chart />
+                                  <Revenue />
                                 </div>
                               </div>
                             </div>
@@ -273,7 +288,10 @@ class Metrics extends Component {
                                     <td style={{ color: '#723DBE' }}>
                                       Mercy Mukoya
                                     </td>
-                                    <td>1.3 &nbsp; +0.2</td>
+                                    <td>
+                                      1.3 &nbsp; +0.2{' '}
+                                      <span className='glyphicon glyphicon-triangle-top'></span>{' '}
+                                    </td>
                                     <td>1.2 &nbsp; +0.3</td>
                                     <td>
                                       96%
@@ -309,8 +327,8 @@ class Metrics extends Component {
                                     <td style={{ color: '#723DBE' }}>
                                       Kennedy Ayako
                                     </td>
-                                    <td>1.3 &nbsp; +0.2</td>
-                                    <td>1.2 &nbsp; +0.3</td>
+                                    <td>1.8 &nbsp; +0.4</td>
+                                    <td>1.8 &nbsp; +0.2</td>
                                     <td>
                                       92%
                                       <div className='progress'>
@@ -343,8 +361,8 @@ class Metrics extends Component {
                                     <td style={{ color: '#723DBE' }}>
                                       Stephanie Tomsett
                                     </td>
-                                    <td>1.3 &nbsp; +0.2</td>
-                                    <td>1.2 &nbsp; +0.3</td>
+                                    <td>2.7 &nbsp; 2.5</td>
+                                    <td>2.0 &nbsp; 1.8</td>
                                     <td>
                                       58%
                                       <div className='progress'>
@@ -377,8 +395,8 @@ class Metrics extends Component {
                                     <td style={{ color: '#723DBE' }}>
                                       Faith Kityo
                                     </td>
-                                    <td>1.3 &nbsp; +0.2</td>
-                                    <td>1.2 &nbsp; +0.3</td>
+                                    <td>2.8 &nbsp; -0.5</td>
+                                    <td>2.5 &nbsp; -2.1</td>
                                     <td>
                                       74%
                                       <div className='progress'>

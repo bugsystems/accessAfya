@@ -20,27 +20,21 @@ ReactFC.fcRoot(FusionCharts, Line, FusionTheme);
 // STEP 2 - Chart Data
 const chartData = [
   {
-    label: 'Venezuela',
     value: '20'
   },
   {
-    label: 'Iran',
     value: '75'
   },
   {
-    label: 'Russia',
     value: '90'
   },
   {
-    label: 'UAE',
     value: '120'
   },
   {
-    label: 'US',
     value: '230'
   },
   {
-    label: 'China',
     value: '379'
   }
 ];
@@ -51,6 +45,7 @@ const chartConfigs = {
   width: '200', // Width of the chart
   height: '150', // Height of the chart
   dataFormat: 'json', // Data type
+  color: 'green',
   dataSource: {
     // Chart Configuration
     chart: {
@@ -72,7 +67,7 @@ const chartConfigs = {
 };
 
 // STEP 4 - Creating the DOM element to pass the react-fusioncharts component
-class Chart extends Component {
+class Revenue extends Component {
   render() {
     return (
       <div className='container'>
@@ -84,4 +79,4 @@ class Chart extends Component {
   }
 }
 
-export default Chart;
+export default Revenue;
