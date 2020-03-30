@@ -19,10 +19,7 @@ class Metrics extends Component {
           <div className='col-md-2 mt-1 sidebar-menu'>
             <div className='row'>
               <div className='offset-4 sidebar-items'>
-                <div className='mt-2'>Home</div>
-                <div>Comments</div>
-                <div>Analytics</div>
-                <div>Settings</div>
+                <div>Side Bar</div>
               </div>
             </div>
           </div>

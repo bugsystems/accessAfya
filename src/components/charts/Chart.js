@@ -20,27 +20,21 @@ ReactFC.fcRoot(FusionCharts, Line, FusionTheme);
 // STEP 2 - Chart Data
 const chartData = [
   {
-    label: 'Venezuela',
     value: '20'
   },
   {
-    label: 'Iran',
     value: '75'
   },
   {
-    label: 'Russia',
     value: '90'
   },
   {
-    label: 'UAE',
     value: '120'
   },
   {
-    label: 'US',
     value: '230'
   },
   {
-    label: 'China',
     value: '379'
   }
 ];
