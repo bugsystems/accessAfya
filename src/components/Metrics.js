@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
 import user from '../images/user.jpg';
 import Chart from './charts/Chart';
+import Patient from './charts/Patient';
 import Revenue from './charts/Revenue';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPlus,
+  faEllipsisV,
+  faCaretUp,
+  faCaretDown,
+  faFolder,
+  faChartLine,
+  faCommentAlt,
+  faSlidersH
+} from '@fortawesome/free-solid-svg-icons';
 
 import { Container, Row } from 'react-bootstrap-grid-component';
 
@@ -16,17 +28,37 @@ class Metrics extends Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-md-2 mt-1 sidebar-menu'>
+          <div className='col-md-1 mt-1 sidebar-menu'>
             <div className='row'>
-              <div className='offset-4 sidebar-items'>
-                <div>Side Bar</div>
+              <div className='col-md-12'></div>
+              <div className='col-md-12'></div>
+              <div className='col-md-12'>
+                <div className='sidebar-items'>
+                  <div className='menu-item'>
+                    <FontAwesomeIcon icon={faFolder} />
+                  </div>
+                  <a className='menu-item' href='#'>
+                    <FontAwesomeIcon
+                      icon={faChartLine}
+                      style={{ color: 'blueviolet' }}
+                    />
+                  </a>
+                  <div className='menu-item'>
+                    <FontAwesomeIcon icon={faCommentAlt} />
+                  </div>
+                  <div className='menu-item'>
+                    <FontAwesomeIcon icon={faSlidersH} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className='col-md-10'>
+          <div className='col-md-11'>
             <div className='row  notification-bar'>
               <div className='col-md-7'>
-                <button className='btn btn-light'>Add Assignment +</button>
+                <button className='btn btn-light'>
+                  Add Assignment <FontAwesomeIcon icon={faPlus} />{' '}
+                </button>
               </div>
               <div className='col-md-2' style={{ display: 'table-cell' }}>
                 <div className='progress'>
@@ -46,7 +78,7 @@ class Metrics extends Component {
               <div className='col-md-3 pull-right'>
                 <div>
                   Kepha Marasi <br />{' '}
-                  <img src={user} className='img-user img-circle'></img>
+                  <img src={user} className=' img-circle img-rounded'></img>
                   <p className='text-muted'>kephamarasi@gmail.com </p>
                 </div>
               </div>
@@ -57,21 +89,22 @@ class Metrics extends Component {
                   <Container>
                     <h2>Analytics</h2>
                     <Row>
-                      <div className='col-md-4'>
+                      <div className='col-md-3'>
                         <div className='row'>
                           <div
                             className='card col-md-11 mt-3 visited'
                             style={{ textAlign: 'justify', height: 'auto' }}
                           >
-                            <div className='card-body'>
+                            <div className='card-body visits'>
                               <p className='text-muted'>VISITS</p>
-                              <button
+                              <a
                                 id='visit'
                                 className='btn mt-1 active'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
                                 }}
+                                href='#'
                               >
                                 <span
                                   className='badge'
@@ -79,9 +112,8 @@ class Metrics extends Component {
                                 >
                                   7
                                 </span>
-                                Kiambu{' '}
-                                <span className='glyphicon glyphicon-options-vertical'></span>
-                              </button>
+                                Kiambu <FontAwesomeIcon icon={faEllipsisV} />
+                              </a>
                               <button
                                 className='btn mt-1'
                                 style={{
@@ -95,7 +127,8 @@ class Metrics extends Component {
                                 >
                                   12
                                 </span>
-                                Mukuru Kwa Reuben
+                                Mukuru Kwa Reuben{' '}
+                                <FontAwesomeIcon icon={faEllipsisV} />
                               </button>
                               <button
                                 className='btn mt-1'
@@ -110,7 +143,8 @@ class Metrics extends Component {
                                 >
                                   26
                                 </span>
-                                Mukuru Kwa Njenga
+                                Mukuru Kwa Njenga{' '}
+                                <FontAwesomeIcon icon={faEllipsisV} />
                               </button>
                               <button
                                 className='btn mt-1'
@@ -125,7 +159,7 @@ class Metrics extends Component {
                                 >
                                   38
                                 </span>
-                                Baba Dogo
+                                Baba Dogo <FontAwesomeIcon icon={faEllipsisV} />
                               </button>
                               <br />
                               <button
@@ -141,7 +175,7 @@ class Metrics extends Component {
                                 >
                                   41
                                 </span>
-                                Kosovo
+                                Kosovo <FontAwesomeIcon icon={faEllipsisV} />
                               </button>
                               <br />
                               <button
@@ -157,66 +191,53 @@ class Metrics extends Component {
                                 >
                                   24
                                 </span>
-                                Mukuru Kayaba
+                                Mukuru Kayaba{' '}
+                                <FontAwesomeIcon icon={faEllipsisV} />
                               </button>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className='col-md-8'>
+                      <div className='col-md-9'>
                         <div className='row'>
                           <div className='card col-md-12 mt-3'>
                             <div className='card-body'>
                               <p className='text-muted'>KEY ISSUES</p>
                               <div className='row'>
-                                <div className='col-lg-3 col-sm-6'>
-                                  <div
-                                    className='card mt-3'
-                                    style={{ padding: '5px' }}
-                                  >
-                                    <div>Wrong Prescription</div>
-                                    <p className='text-muted'>Kosovo</p>
-                                  </div>
+                                <div className='issue mt-3'>
+                                  Wrong Prescription{' '}
+                                  <FontAwesomeIcon icon={faEllipsisV} />
+                                  <p className='text-muted'>Kosovo</p>
                                 </div>
                                 {/* another */}
-                                <div className='col-lg-3 col-sm-6'>
-                                  <div
-                                    className='card mt-3'
-                                    style={{ padding: '5px' }}
-                                  >
-                                    <div>Opened Late</div>
-                                    <p className='text-muted'>Kiambu</p>
-                                  </div>
+                                <div className='issue mt-3'>
+                                  Opened Late{' '}
+                                  <FontAwesomeIcon icon={faEllipsisV} />
+                                  <p className='text-muted'>Kiambu</p>
+                                </div>
+                                {/* Another issue */}
+                                <div className='issue mt-3'>
+                                  Basd Receipts{' '}
+                                  <FontAwesomeIcon icon={faEllipsisV} />
+                                  <p className='text-muted'>New York</p>
                                 </div>
                                 {/* Another */}
-                                <div className='col-lg-3 col-sm-6'>
-                                  <div
-                                    className='card mt-3'
-                                    style={{ padding: '5px' }}
-                                  >
-                                    <div>Bad Receipts</div>
-                                    <p className='text-muted'>New York</p>
-                                  </div>
+                                <div className='issue mt-3'>
+                                  Late Check in{' '}
+                                  <FontAwesomeIcon icon={faEllipsisV} />
+                                  <p className='text-muted'>Mathare</p>
                                 </div>
-                                {/* another */}
-                                <div className='col-lg-3 col-sm-6'>
-                                  <div
-                                    className='card mt-3'
-                                    style={{ padding: '5px' }}
-                                  >
-                                    <div>Late Check in</div>
-                                    <p className='text-muted'>Mathare</p>
-                                  </div>
+                                {/* Another */}
+                                <div className='issue mt-3'>
+                                  Delay in Lab{' '}
+                                  <FontAwesomeIcon icon={faEllipsisV} />
+                                  <p className='text-muted'>Kiambu</p>
                                 </div>
-                                {/* another */}
-                                <div className='col-lg-3 col-sm-6'>
-                                  <div
-                                    className='card mt-3'
-                                    style={{ padding: '5px' }}
-                                  >
-                                    <div>Delay in Lab</div>
-                                    <p className='text-muted'>Kiambu</p>
-                                  </div>
+                                {/* Another */}
+                                <div className='issue mt-3'>
+                                  Careless wate discharge{' '}
+                                  <FontAwesomeIcon icon={faEllipsisV} />
+                                  <p className='text-muted'>Kiambu</p>
                                 </div>
                               </div>
                             </div>
@@ -230,8 +251,30 @@ class Metrics extends Component {
                               <div className='row'>
                                 <button className='btn btn-light'>Day</button>
                                 <button className='btn btn-light'>Week</button>
-                                <button className='btn btn-light'>Month</button>
-                                <button className='btn btn-light'>Year</button>
+                                <button
+                                  className='btn btn-light'
+                                  style={{
+                                    color: 'blueviolet',
+                                    borderStyle: 'solid',
+                                    borderColor: 'blueviolet',
+                                    borderWidth: 'thin'
+                                  }}
+                                >
+                                  Month
+                                </button>
+                                <button className='btn btn-light'>Year</button>{' '}
+                                &nbsp;
+                                <button
+                                  className='btn btn-light'
+                                  style={{
+                                    marginLeft: '10px',
+                                    color: 'blueviolet'
+                                  }}
+                                  name='daterange'
+                                  value='10 Dec 2019 - 10 Jan 2020'
+                                >
+                                  10 Dec 2019 - 10 Jan 2020
+                                </button>
                               </div>
                             </div>
                           </div>
@@ -242,21 +285,32 @@ class Metrics extends Component {
                             <div className='row'>
                               <div className='card col-md-4 mt-2'>
                                 <h6>Foot Fall</h6>
-                                <p className='chart-value'>13k Patients </p>
+                                <p className='chart-value'>13k</p>
+                                <p className='text-muted'>Patients</p>
+                                <div style={{ color: '#65fa92' }}>
+                                  <FontAwesomeIcon icon={faCaretUp} /> +0.2{' '}
+                                </div>
                                 <Chart />
                               </div>
                               <div className='card col-md-4 mt-2'>
                                 <h6>Patient Satisfaction</h6>
-                                <p className='chart-value'>7.8 NPS </p>
-                                <Chart />
+                                <p className='chart-value'>7.8</p>
+                                <p className='text-muted'>NPS </p>
+
+                                <div style={{ color: 'red' }}>
+                                  <FontAwesomeIcon icon={faCaretDown} /> -0.1{' '}
+                                </div>
+                                <Patient />
                               </div>
 
                               <div className='card col-md-4 mt-2'>
                                 <h6>Revenue</h6>
-                                <p className='chart-value'>4.2M Kshs</p>
-                                <div style={{ float: 'right' }}>
-                                  <Revenue />
+                                <p className='chart-value'>4.2m</p>
+                                <p className='text-muted'>Kenyan Shillings</p>
+                                <div style={{ color: '#65fa92' }}>
+                                  <FontAwesomeIcon icon={faCaretUp} /> +2.4{' '}
                                 </div>
+                                <Revenue />
                               </div>
                             </div>
                           </div>
@@ -266,7 +320,7 @@ class Metrics extends Component {
                           <div className='card col-md-12 mt-3'>
                             <div className='card-body'>
                               <p>Staff Performance</p>
-                              <table class='table'>
+                              <table class='table table-responsive'>
                                 <thead>
                                   <tr>
                                     <th scope='col'>
@@ -287,9 +341,18 @@ class Metrics extends Component {
                                     </td>
                                     <td>
                                       1.3 &nbsp; +0.2{' '}
-                                      <span className='glyphicon glyphicon-triangle-top'></span>{' '}
+                                      <FontAwesomeIcon
+                                        icon={faCaretUp}
+                                        style={{ color: 'lawngreen' }}
+                                      />{' '}
                                     </td>
-                                    <td>1.2 &nbsp; +0.3</td>
+                                    <td>
+                                      1.2 +0.3{' '}
+                                      <FontAwesomeIcon
+                                        icon={faCaretUp}
+                                        style={{ color: 'lawngreen' }}
+                                      />
+                                    </td>
                                     <td>
                                       96%
                                       <div className='progress'>
@@ -324,8 +387,20 @@ class Metrics extends Component {
                                     <td style={{ color: '#723DBE' }}>
                                       Kennedy Ayako
                                     </td>
-                                    <td>1.8 &nbsp; +0.4</td>
-                                    <td>1.8 &nbsp; +0.2</td>
+                                    <td>
+                                      1.8 &nbsp; +0.4{' '}
+                                      <FontAwesomeIcon
+                                        icon={faCaretUp}
+                                        style={{ color: 'lawngreen' }}
+                                      />
+                                    </td>
+                                    <td>
+                                      1.8 +0.2{' '}
+                                      <FontAwesomeIcon
+                                        icon={faCaretUp}
+                                        style={{ color: 'lawngreen' }}
+                                      />
+                                    </td>
                                     <td>
                                       92%
                                       <div className='progress'>
@@ -392,8 +467,20 @@ class Metrics extends Component {
                                     <td style={{ color: '#723DBE' }}>
                                       Faith Kityo
                                     </td>
-                                    <td>2.8 &nbsp; -0.5</td>
-                                    <td>2.5 &nbsp; -2.1</td>
+                                    <td>
+                                      2.8 &nbsp; -0.5{' '}
+                                      <FontAwesomeIcon
+                                        icon={faCaretDown}
+                                        style={{ color: 'red' }}
+                                      />
+                                    </td>
+                                    <td>
+                                      2.5 &nbsp; -2.1{' '}
+                                      <FontAwesomeIcon
+                                        icon={faCaretDown}
+                                        style={{ color: 'red' }}
+                                      />
+                                    </td>
                                     <td>
                                       74%
                                       <div className='progress'>

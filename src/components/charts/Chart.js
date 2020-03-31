@@ -26,16 +26,16 @@ const chartData = [
     value: '75'
   },
   {
-    value: '90'
+    value: '100'
+  },
+  {
+    value: '80'
   },
   {
     value: '120'
   },
   {
-    value: '230'
-  },
-  {
-    value: '379'
+    value: '190'
   }
 ];
 
@@ -48,6 +48,7 @@ const chartConfigs = {
   dataSource: {
     // Chart Configuration
     chart: {
+      drawAnchors: '0',
       //Set the chart caption
       // caption: 'Countries With Most Oil Reserves [2017-18]',
       //Set the chart subcaption
@@ -58,7 +59,8 @@ const chartConfigs = {
       // yAxisName: 'Reserves (MMbbl)',
       // numberSuffix: 'K',
       //Set the theme for your chart
-      theme: 'fusion'
+      theme: 'fusion',
+      showYAxisValues: '0'
     },
     // Chart Data
     data: chartData

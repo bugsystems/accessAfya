@@ -49,6 +49,8 @@ const chartConfigs = {
   dataSource: {
     // Chart Configuration
     chart: {
+      drawAnchors: '0',
+      showYAxisValues: '0',
       //Set the chart caption
       // caption: 'Countries With Most Oil Reserves [2017-18]',
       //Set the chart subcaption
