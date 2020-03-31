@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <Router>
         <div className='App'>
-<h4>Analytics Live GitHub Page</>
+<h4>Analytics Live GitHub Page</h4>
           <Metrics />
         </div>
       </Router>
