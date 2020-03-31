@@ -77,8 +77,11 @@ class Metrics extends Component {
               </div>
               <div className='col-md-3 pull-right'>
                 <div>
+                  <img
+                    src={user}
+                    className='img-user img-circle img-rounded'
+                  ></img>
                   Kepha Marasi <br />{' '}
-                  <img src={user} className=' img-circle img-rounded'></img>
                   <p className='text-muted'>kephamarasi@gmail.com </p>
                 </div>
               </div>
@@ -99,7 +102,7 @@ class Metrics extends Component {
                               <p className='text-muted'>VISITS</p>
                               <a
                                 id='visit'
-                                className='btn mt-1 active'
+                                className='btn mt-1 visit-item'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
@@ -210,7 +213,14 @@ class Metrics extends Component {
                                   <p className='text-muted'>Kosovo</p>
                                 </div>
                                 {/* another */}
-                                <div className='issue mt-3'>
+                                <div
+                                  className='issue mt-3'
+                                  style={{
+                                    borderStyle: 'solid',
+                                    borderWidth: 'thin',
+                                    borderColor: 'blueviolet'
+                                  }}
+                                >
                                   Opened Late{' '}
                                   <FontAwesomeIcon icon={faEllipsisV} />
                                   <p className='text-muted'>Kiambu</p>
@@ -249,20 +259,80 @@ class Metrics extends Component {
                             <div className='card-body'>
                               <p className='text-muted'>MONITORING PERIOD</p>
                               <div className='row'>
-                                <button className='btn btn-light'>Day</button>
-                                <button className='btn btn-light'>Week</button>
-                                <button
-                                  className='btn btn-light'
-                                  style={{
-                                    color: 'blueviolet',
-                                    borderStyle: 'solid',
-                                    borderColor: 'blueviolet',
-                                    borderWidth: 'thin'
-                                  }}
-                                >
-                                  Month
-                                </button>
-                                <button className='btn btn-light'>Year</button>{' '}
+                                <div className='date-dropdown'>
+                                  <button className='btn btn-light'>Day</button>
+                                  <div className='dropdown-content'>
+                                    <a href='#'> 1</a>
+                                    <a href='#'>2</a>
+                                    <a href='#'>3</a>
+                                    <a href='#'>4</a>
+                                  </div>
+                                </div>
+                                <div className='date-dropdown'>
+                                  <button className='btn btn-light'>
+                                    Week
+                                  </button>
+                                  <div className='dropdown-content'>
+                                    <a href='#'> Week 1</a>
+                                    <a href='#'>Week 2</a>
+                                    <a href='#'>Week 3</a>
+                                    <a href='#'>Week 4</a>
+                                  </div>
+                                </div>
+                                <div className='date-dropdown'>
+                                  <button
+                                    className='btn btn-light'
+                                    style={{
+                                      color: 'blueviolet',
+                                      borderStyle: 'solid',
+                                      borderColor: 'blueviolet',
+                                      borderWidth: 'thin'
+                                    }}
+                                  >
+                                    Month
+                                  </button>
+                                  <div className='dropdown-content'>
+                                    <a href='#'> Jan</a>
+                                    <a href='#'> Feb</a>
+                                    <a href='#'> Mar</a>
+                                    <a href='#'> Apr</a>
+                                    <a href='#'> May</a>
+                                    <a href='#'> Jun</a>
+                                    <a href='#'> Jul</a>
+                                    <a href='#'> Aug</a>
+                                    <a href='#'> Sep</a>
+                                    <a href='#'> Oct</a>
+                                    <a href='#'> Nov</a>
+                                    <a href='#'> Nov</a>
+                                  </div>
+                                </div>
+                                <div className='date-dropdown'>
+                                  <button
+                                    className='btn btn-light'
+                                    style={{
+                                      color: 'blueviolet',
+                                      borderStyle: 'solid',
+                                      borderColor: 'blueviolet',
+                                      borderWidth: 'thin'
+                                    }}
+                                  >
+                                    Year
+                                  </button>
+                                  <div className='dropdown-content'>
+                                    <a href='#'> </a>
+                                    <a href='#'> 2010</a>
+                                    <a href='#'> 2011</a>
+                                    <a href='#'> 2012</a>
+                                    <a href='#'> 2013</a>
+                                    <a href='#'> 2014</a>
+                                    <a href='#'> 2015</a>
+                                    <a href='#'> 2016</a>
+                                    <a href='#'> 2017</a>
+                                    <a href='#'> 2018</a>
+                                    <a href='#'> 2019</a>
+                                    <a href='#'> 2020</a>
+                                  </div>
+                                </div>{' '}
                                 &nbsp;
                                 <button
                                   className='btn btn-light'
