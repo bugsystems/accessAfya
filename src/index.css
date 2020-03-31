@@ -92,11 +92,12 @@ a:active {
 }
 .visit-item:hover {
   background-color: blueviolet;
-  display: block;
-}
-.visit-item a:hover {
   color: white;
 }
+.visits-item a:hover {
+  color: white;
+}
+
 .date-dropdown {
   position: relative;
   display: inline-block;

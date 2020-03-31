@@ -20,11 +20,6 @@ import { Container, Row } from 'react-bootstrap-grid-component';
 class Metrics extends Component {
   render() {
     // Styles
-
-    const staffName = {
-      color: 'purple',
-      padding: '2px'
-    };
     return (
       <div className='container-fluid'>
         <div className='row'>
@@ -117,8 +112,8 @@ class Metrics extends Component {
                                 </span>
                                 Kiambu <FontAwesomeIcon icon={faEllipsisV} />
                               </a>
-                              <button
-                                className='btn mt-1'
+                              <a
+                                className='btn mt-1 visit-item'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
@@ -132,9 +127,9 @@ class Metrics extends Component {
                                 </span>
                                 Mukuru Kwa Reuben{' '}
                                 <FontAwesomeIcon icon={faEllipsisV} />
-                              </button>
-                              <button
-                                className='btn mt-1'
+                              </a>
+                              <a
+                                className='btn mt-1 visit-item'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
@@ -148,9 +143,9 @@ class Metrics extends Component {
                                 </span>
                                 Mukuru Kwa Njenga{' '}
                                 <FontAwesomeIcon icon={faEllipsisV} />
-                              </button>
-                              <button
-                                className='btn mt-1'
+                              </a>
+                              <a
+                                className='btn mt-1 visit-item'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
@@ -163,10 +158,10 @@ class Metrics extends Component {
                                   38
                                 </span>
                                 Baba Dogo <FontAwesomeIcon icon={faEllipsisV} />
-                              </button>
+                              </a>
                               <br />
-                              <button
-                                className='btn mt-1'
+                              <a
+                                className='btn mt-1 visit-item'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
@@ -179,10 +174,10 @@ class Metrics extends Component {
                                   41
                                 </span>
                                 Kosovo <FontAwesomeIcon icon={faEllipsisV} />
-                              </button>
+                              </a>
                               <br />
-                              <button
-                                className='btn mt-1'
+                              <a
+                                className='btn mt-1 visit-item'
                                 style={{
                                   backgroundColor: '#ffff',
                                   borderColor: '#898989'
@@ -196,7 +191,7 @@ class Metrics extends Component {
                                 </span>
                                 Mukuru Kayaba{' '}
                                 <FontAwesomeIcon icon={faEllipsisV} />
-                              </button>
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -307,15 +302,7 @@ class Metrics extends Component {
                                   </div>
                                 </div>
                                 <div className='date-dropdown'>
-                                  <button
-                                    className='btn btn-light'
-                                    style={{
-                                      color: 'blueviolet',
-                                      borderStyle: 'solid',
-                                      borderColor: 'blueviolet',
-                                      borderWidth: 'thin'
-                                    }}
-                                  >
+                                  <button className='btn btn-light'>
                                     Year
                                   </button>
                                   <div className='dropdown-content'>
