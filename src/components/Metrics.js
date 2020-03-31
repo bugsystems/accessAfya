@@ -12,7 +12,8 @@ import {
   faFolder,
   faChartLine,
   faCommentAlt,
-  faSlidersH
+  faSlidersH,
+  faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 import { Container, Row } from 'react-bootstrap-grid-component';
@@ -76,8 +77,10 @@ class Metrics extends Component {
                     src={user}
                     className='img-user img-circle img-rounded'
                   ></img>
-                  Kepha Marasi <br />{' '}
-                  <p className='text-muted'>kephamarasi@gmail.com </p>
+                  <a href='#'>
+                    Kepha Marasi <FontAwesomeIcon icon={faPencilAlt} />{' '}
+                  </a>{' '}
+                  <br /> <p className='text-muted'>kephamarasi@gmail.com </p>
                 </div>
               </div>
             </div>
