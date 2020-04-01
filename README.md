@@ -8,5 +8,5 @@ A React JS UI dashboard to illustrate key metrics that are fundamental to operat
 2. Bootstrap CSS, [npm install react-bootstrap bootstrap],
 3. FontAwesome Icons, [npm install @fortawesome/fontawesome],
 4. A git account, where you will create a git repository for the project,
-5. COding editor, Visual Studio Code in this case,
-6. Design skills!
+5. Coding editor, Visual Studio Code in this case,
+6. Fusion charts, for plotting the trends for various KPIs
